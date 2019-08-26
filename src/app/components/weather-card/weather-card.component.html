@@ -1,0 +1,23 @@
+<div>
+    <div class="card" *ngIf="weather as w">
+        <div class="icon">
+            <app-weather-icon [code]="w.cod"></app-weather-icon>
+        </div>
+        <div class="temp">
+            <p>Temperatura</p>
+            <p class="big">{{w.temp}}º</p>
+        </div>
+        <div class="lowtemp" *ngIf="w.minMaxTemp">
+            {{w.minMaxTemp.max}}º
+            <span>Mìnima</span>
+        </div>
+        <div class="hightemp" *ngIf="w.minMaxTemp">
+            {{w.minMaxTemp.max}}º
+            <span>Maxima</span>
+        </div>
+        <div class="description">
+            <h2>{{w.name}}</h2>
+            <p>{{w.description}}</p>
+        </div>
+    </div>
+</div>

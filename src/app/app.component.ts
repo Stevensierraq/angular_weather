@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ForcastServiceService } from './services/forcast-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weather';
+
+  constructor(private forecastService: ForcastServiceService) {
+
+   }
+
+  ngOnInit() {
+    this.forecastService.weather$.subscribe(console.log)
+  }
 }
