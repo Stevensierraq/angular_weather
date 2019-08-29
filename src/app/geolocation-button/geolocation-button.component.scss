@@ -1,0 +1,22 @@
+@import '../../styles//colors';
+
+button {
+    background-color: $accent;
+    padding: 10px 15px;
+    outline: none;
+    border: 0;
+    color: $light;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+
+    &:active{
+        opacity: 0.56
+    }
+
+}
+
+p {
+    opacity: 0.56;
+    font-size: 0.7em;
+}
